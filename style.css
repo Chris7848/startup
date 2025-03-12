@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+ 
+}
+body {
+  font-family: sans-serif;
+  background-color: aquamarine;
+  
+}
+header {
+  background-color: rgb(243, 83, 109);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 20px;
+  position: sticky;
+  height: 60px;
+  border-radius: 100px;
+  padding: 0 15px;
+  z-index: 10;
+  top: 8px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  width: 36px;
+  border-radius: 10px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.active {
+  color: yellow;
+}
+
+.register-btn {
+  background-color: brown;
+  padding: 8px 17px;
+  border-radius: 10px;
+}
+
+.mobile-icon {
+  width: 40px;
+  filter: invert();
+  display: none; /* on large creen hide it, it will how on smaLL SREEN*/
+}
+.ne-nav{
+  display: flex;
+  flex-direction: column;
+  right: 2rem;
+  position: absolute;
+  background-color:  rgba(243, 83, 110, 0.76);
+  padding: 20px 20px;
+  margin-top: 10px;
+  border-radius: 20px;
+  justify-content: center;
+  z-index: 10;
+  align-items: center;
+  flex-direction: column ;
+  display: none;
+  backdrop-filter: blur(13px);
+}
+.ne-nav a{
+  align-items: center;
+  gap: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero {
+  margin-top: 5rem;
+  padding: 0 20px;
+  height: (100vh-5rem);
+}
+.hero-wrapper {
+  display: flex;
+  max-width: 1200px;
+  margin: 100px auto;
+  align-items: center;
+}
+.hero-left,
+.hero-right {
+  flex: 300px;
+}
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.hero-btns {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.explore-btn {
+  background-color: rgb(243, 83, 109);
+  padding: 7px 20px;
+  border-radius: 15px;
+  border-top-right-radius: 0;
+  transition: 0.5s;
+  
+}
+.explore-btn:hover{
+  border-top-right-radius: 15px;
+}
+.video-icon {
+  border-radius: 50px;
+  width: 60px;
+  animation-delay: 2s;
+}
+.watch-btn {
+  align-items: center;
+  gap: 20px;
+  display: flex;
+  font-weight: 600;
+  cursor: pointer;
+  animation-delay: 2s;
+}
+.title p:nth-child(1) {
+  font-size: 4rem;
+  line-height: 0.5;
+  font-family: "Oleo Script Swash Caps";
+  color: rgb(243, 83, 109);
+}
+.title p:nth-child(2) {
+  font-size: 4.2rem;
+  font-weight: 700;
+  animation-delay: 1;
+}
+.discription {
+  width: 55%;
+  line-height: 1.5;
+  color: grey;
+}
+.hero-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+
+.hero-right img {
+  z-index: 1;
+}
+.pink {
+  position: absolute;
+  width: 70%;
+  height: 100%;
+}
+
+.reviews {
+  position: absolute;
+  z-index: 4;
+  position: absolute;
+  display: flex;
+  height: 60px;
+  align-items: center;
+  background-color: rgb(243, 83, 109);
+  border-radius: 35px;
+  padding: 5px 4px;
+  gap: 5px;
+  padding: 7px;
+  backdrop-filter: 4px;
+  border: 1px solid wheat;
+  left: 100px;
+}
+.reviews-left {
+  display: flex;
+  align-items: center;
+}
+
+.reviews-left img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.text {
+  color: white;
+}
+.reviews-left img:nth-child(2),
+.reviews-left img:nth-child(3) {
+  margin-left: -15px;
+}
+.video-main{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  top: 0;
+  left: 0;
+  z-index: 11;
+  backdrop-filter: blur(2px);
+  display: none;
+}
+.video-player{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  z-index: 12;
+  border-radius: 4px;
+  height: 90%;
+  display: none;
+}
+#anim{
+  opacity: 0;
+  transform: translateY(30px);
+  animation: moveup 0.5s linear forwards;
+}
+
+@keyframes moveup{
+ 100% {opacity: 1;
+  transform: translateY(0)
+  ;
+
+  }
+}
+@media screen and (max-width: 1200px) {
+  header {
+    border-radius: unset;
+  }
+  
+}
+@media screen and (max-width: 768px) {
+  header {
+    border-radius: unset;
+    margin: 0;
+    top: 0;
+  }
+  nav {
+    display: none;
+    
+  }
+  .ne-nav{
+    width: 200px;
+    display: none;
+  }
+
+  .ne-nav a {
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+  }
+
+  .mobile-icon {
+    display: block;
+  }
+  .hero {
+    margin-top: -70px;
+    width: 100%;
+  }
+
+  .hero-wrapper {
+    flex-direction: column-reverse;
+    gap: 60px;
+  }
+  .hero-left {
+    width: 100%;
+    align-items: center;
+  }
+  .title {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .discription {
+    text-align: center;
+    width: 100%;
+  }
+  .hero-right {
+    justify-content: center;
+  }
+  .reviews {
+    left: 10px;
+  }
+  .video-player{
+    width: 95%;
+  }
+}
+@media screen and (max-width:418px) {
+  .title{
+    gap: 10px ;
+  }
+
+  .title p:nth-child(2){
+   font-size: 50px;
+    
+  }
+  
+}
+  
+
